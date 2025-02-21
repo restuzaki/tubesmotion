@@ -1,0 +1,52 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\damai\\.gradle\\daemon\\8.3\\com.motioncompany.tubes_motion.app-mergeDebugResources-24:\\values-v31\\values-v31.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\damai\\tubes_motion\\android\\app\\src\\main\\res\\values-v31\\styles.xml",
+                    "from": {
+                        "startLines": "3,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "173,-1",
+                        "endLines": "10,-1",
+                        "endColumns": "12,-1",
+                        "endOffsets": "696,-1"
+                    },
+                    "to": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,583",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "578,747"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.motioncompany.tubes_motion.app-mergeDebugResources-24:/values-v31/values-v31.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\damai\\tubes_motion\\android\\app\\src\\main\\res\\values-v31\\styles.xml",
+                    "from": {
+                        "startLines": "3,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "173,-1",
+                        "endLines": "10,-1",
+                        "endColumns": "12,-1",
+                        "endOffsets": "696,-1"
+                    },
+                    "to": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,583",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "578,747"
+                    }
+                }
+            ]
+        }
+    ]
+}

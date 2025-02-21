@@ -54,7 +54,7 @@
 40        android:debuggable="true"
 41        android:extractNativeLibs="true"
 42        android:icon="@mipmap/launcher_icon"
-43        android:label="tubes_motion" >
+43        android:label="Motion App" >
 44        <activity
 45            android:name="com.motioncompany.tubes_motion.MainActivity"
 46            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

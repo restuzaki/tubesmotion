@@ -25,3 +25,4 @@ com.motioncompany.tubes_motion.app-resValues-23 C:\Users\damai\tubes_motion\buil
 com.motioncompany.tubes_motion.app-packageDebugResources-24 C:\Users\damai\tubes_motion\build\app\intermediates\incremental\debug\packageDebugResources\merged.dir
 com.motioncompany.tubes_motion.app-packageDebugResources-25 C:\Users\damai\tubes_motion\build\app\intermediates\incremental\debug\packageDebugResources\stripped.dir
 com.motioncompany.tubes_motion.app-merged_res-26 C:\Users\damai\tubes_motion\build\app\intermediates\merged_res\debug
+com.motioncompany.tubes_motion.app-packaged_res-27 C:\Users\damai\tubes_motion\build\flutter_native_splash\intermediates\packaged_res\debug
