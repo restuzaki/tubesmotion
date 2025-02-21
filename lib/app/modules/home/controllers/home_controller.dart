@@ -1,23 +1,23 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  var selectedIndex = 0.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void changeIndex(int index) {
+    selectedIndex.value = index;
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  Widget get floatingActionButton => FloatingActionButton(
+        backgroundColor: const Color.fromARGB(255, 64, 70, 251),
+        elevation: 10,
+        onPressed: () {
+          Get.snackbar("QR Code Scanner", "Silahkan Scan QR Code");
+        },
+        child: const Icon(
+          Icons.qr_code_scanner,
+          size: 28,
+          color: Colors.white,
+        ),
+      );
 }

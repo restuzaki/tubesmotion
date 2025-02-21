@@ -10,6 +10,7 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Stack(
           children: [
@@ -18,8 +19,8 @@ class LoginView extends StatelessWidget {
               top: -50,
               left: -50,
               child: Container(
-                width: 200,
-                height: 190,
+                width: 180,
+                height: 200,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 64, 70, 251),
                   shape: BoxShape.circle,
