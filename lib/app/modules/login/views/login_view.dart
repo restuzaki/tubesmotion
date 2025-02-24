@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-
 import '../controllers/login_controller.dart';
 
 class LoginView extends StatelessWidget {
@@ -74,29 +73,25 @@ class LoginView extends StatelessWidget {
                     const Text(
                       'Welcome Back',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 20),
                     Container(
                       width: 265.9,
                       height: 180,
                       decoration: BoxDecoration(
-                        color: Colors.grey[200],
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       clipBehavior: Clip.hardEdge,
-                      child: LottieBuilder.asset(
-                        'assets/animation/login.json',
-                      ),
+                      child: LottieBuilder.asset('assets/animation/login.json'),
                     ),
                     const SizedBox(height: 20),
                     Container(
                       width: 350,
                       child: TextFormField(
-                        onChanged: (value) => controller.email.value = value,
+                        controller: controller.emailController,
                         decoration: InputDecoration(
                           labelText: 'Email',
                           labelStyle: const TextStyle(color: Colors.black),
@@ -104,16 +99,12 @@ class LoginView extends StatelessWidget {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
                             borderSide: const BorderSide(
-                              color: Colors.grey,
-                              width: 2.0,
-                            ),
+                                color: Colors.grey, width: 2.0),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
                             borderSide: const BorderSide(
-                              color: Colors.black,
-                              width: 2.0,
-                            ),
+                                color: Colors.black, width: 2.0),
                           ),
                         ),
                       ),
@@ -122,7 +113,7 @@ class LoginView extends StatelessWidget {
                     Container(
                       width: 350,
                       child: TextFormField(
-                        onChanged: (value) => controller.password.value = value,
+                        controller: controller.passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
                           labelText: 'Password',
@@ -131,16 +122,12 @@ class LoginView extends StatelessWidget {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
                             borderSide: const BorderSide(
-                              color: Colors.black,
-                              width: 2.0,
-                            ),
+                                color: Colors.black, width: 2.0),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
                             borderSide: const BorderSide(
-                              color: Colors.black,
-                              width: 2.0,
-                            ),
+                                color: Colors.black, width: 2.0),
                           ),
                         ),
                       ),
@@ -148,7 +135,8 @@ class LoginView extends StatelessWidget {
                     const SizedBox(height: 30),
                     GestureDetector(
                       onTap: () {
-                        Get.toNamed('/home');
+                        controller
+                            .login(); // Perbaikan: Panggil fungsi login dari controller
                       },
                       child: Container(
                         width: 350,
@@ -161,10 +149,9 @@ class LoginView extends StatelessWidget {
                           child: Text(
                             "Login",
                             style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                            ),
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
                           ),
                         ),
                       ),
@@ -185,7 +172,7 @@ class LoginView extends StatelessWidget {
                             ' Register',
                             style: TextStyle(
                               fontSize: 14,
-                              color: const Color.fromARGB(255, 64, 70, 251),
+                              color: Color.fromARGB(255, 64, 70, 251),
                               fontWeight: FontWeight.bold,
                             ),
                           ),

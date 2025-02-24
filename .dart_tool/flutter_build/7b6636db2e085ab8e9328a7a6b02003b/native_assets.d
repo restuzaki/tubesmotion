@@ -1,0 +1,1 @@
+ C:\\Users\\damai\\tubes_motion\\.dart_tool\\flutter_build\\7b6636db2e085ab8e9328a7a6b02003b\\native_assets.yaml: 

@@ -7,6 +7,7 @@ import '../controllers/register_controller.dart';
 
 class RegisterView extends GetView<RegisterController> {
   const RegisterView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<RegisterController>(
@@ -29,7 +30,7 @@ class RegisterView extends GetView<RegisterController> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         clipBehavior: Clip.hardEdge,
-                        child: Image.asset('assets/icon/motionicon.png')),
+                        child: Image.asset('assets/icon/icon.png')),
                     const SizedBox(height: 20),
                     Text(
                       'Register',
@@ -48,48 +49,40 @@ class RegisterView extends GetView<RegisterController> {
                     const SizedBox(height: 20),
                     CustomTextField(
                       hintText: 'Full Name',
-                      icon: const Icon(
-                        Icons.person_2_outlined,
-                        color: Colors.black,
-                      ),
-                      textInputType: TextInputType.emailAddress,
-                      controller: TextEditingController(),
+                      icon: const Icon(Icons.person_2_outlined,
+                          color: Colors.black),
+                      textInputType: TextInputType.name,
+                      controller: controller.nameController,
                     ),
                     const SizedBox(height: 20),
                     CustomTextField(
                       hintText: 'Email',
-                      icon: const Icon(
-                        Icons.email_outlined,
-                        color: Colors.black,
-                      ),
+                      icon:
+                          const Icon(Icons.email_outlined, color: Colors.black),
                       textInputType: TextInputType.emailAddress,
-                      controller: TextEditingController(),
+                      controller: controller.emailController,
                     ),
                     const SizedBox(height: 20),
                     CustomTextField(
                       hintText: 'Password',
-                      icon: const Icon(
-                        Icons.lock_outline_rounded,
-                        color: Colors.black,
-                      ),
+                      icon: const Icon(Icons.lock_outline_rounded,
+                          color: Colors.black),
                       isPassword: true,
-                      controller: TextEditingController(),
+                      controller: controller.passwordController,
                     ),
                     const SizedBox(height: 20),
                     CustomTextField(
                       hintText: 'Confirm Password',
-                      icon: const Icon(
-                        Icons.lock_outline_rounded,
-                        color: Colors.black,
-                      ),
+                      icon: const Icon(Icons.lock_outline_rounded,
+                          color: Colors.black),
                       isPassword: true,
-                      controller: TextEditingController(),
+                      controller: controller.confirmPasswordController,
                     ),
                     const SizedBox(height: 40),
                     CustomButton(
                       text: 'Register',
                       onTap: () {
-                        Get.offAndToNamed(Routes.LOGIN);
+                        controller.register();
                       },
                     ),
                     const SizedBox(height: 4),
