@@ -19,7 +19,7 @@ class CustomNavbar extends StatelessWidget {
           buildNavBarItem(CupertinoIcons.home, 'Home', 0),
           buildNavBarItem(
               CupertinoIcons.list_bullet_below_rectangle, 'My Dream', 1),
-          const SizedBox(width: 20), // Untuk memberi ruang di tengah
+          const SizedBox(width: 20),
           buildNavBarItem(CupertinoIcons.group_solid, 'Ask Mentor', 3),
           buildNavBarItem(CupertinoIcons.profile_circled, 'Profile', 4),
         ],

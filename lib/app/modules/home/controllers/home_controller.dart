@@ -7,6 +7,20 @@ class HomeController extends GetxController {
 
   void changeIndex(int index) {
     selectedIndex.value = index;
+    switch (index) {
+      case 0:
+        Get.toNamed('/home');
+        break;
+      case 1:
+        Get.toNamed('/my_dream');
+        break;
+      case 3:
+        Get.toNamed('/ask_mentor');
+        break;
+      case 4:
+        Get.toNamed('/profile');
+        break;
+    }
   }
 
   Widget get floatingActionButton => FloatingActionButton(
