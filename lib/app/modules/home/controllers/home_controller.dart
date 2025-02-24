@@ -12,7 +12,7 @@ class HomeController extends GetxController {
         Get.toNamed('/home');
         break;
       case 1:
-        Get.toNamed('/my_dream');
+        Get.toNamed('/dream');
         break;
       case 3:
         Get.toNamed('/ask_mentor');

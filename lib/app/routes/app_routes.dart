@@ -9,6 +9,7 @@ abstract class Routes {
   static const QRSCANNER = _Paths.QRSCANNER;
   static const PROFILE = _Paths.PROFILE;
   static const ABOUT_APP = _Paths.ABOUT_APP;
+  static const DREAM = _Paths.DREAM;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const QRSCANNER = '/qr';
   static const PROFILE = '/profile';
   static const ABOUT_APP = '/about';
+  static const DREAM = '/dream';
 }

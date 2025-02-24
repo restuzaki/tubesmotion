@@ -10,22 +10,12 @@ class ProfileView extends GetView<ProfileController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
+        automaticallyImplyLeading: false,
         title: const Text(
           "PROFILE",
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
         ),
         centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {
-              Get.toNamed('/about');
-            },
-            icon: const Icon(Icons.settings_rounded),
-          )
-        ],
       ),
       body: ListView(
         padding: const EdgeInsets.all(10),
@@ -63,7 +53,6 @@ class ProfileView extends GetView<ProfileController> {
           ),
           const SizedBox(height: 10),
 
-          // Progress Bar
           Container(
             height: 5,
             width: double.infinity,
