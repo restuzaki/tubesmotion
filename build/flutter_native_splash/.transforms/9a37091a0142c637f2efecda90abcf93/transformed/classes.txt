@@ -1,0 +1,2 @@
+net/jonhanson/flutter_native_splash/FlutterNativeSplashPlugin.class
+net/jonhanson/flutter_native_splash/R.class

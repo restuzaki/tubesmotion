@@ -13,7 +13,9 @@ class ProfileController extends GetxController {
     CustomListTile(
       icon: CupertinoIcons.person_alt,
       title: "About Me",
-      onTap: () {},
+      onTap: () {
+        Get.toNamed(Routes.ABOUT_ME);
+      },
     ),
     CustomListTile(
       title: "About App",

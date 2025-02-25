@@ -205,23 +205,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\damai\\.gradle\\caches\\transforms-3\\62ac00d169f29908206165cd8c63b11e\\transformed\\jetified-activity-1.8.1\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,97",
-                        "endColumns": "41,59",
-                        "endOffsets": "92,152"
-                    },
-                    "to": {
-                        "startLines": "328,356",
-                        "startColumns": "4,4",
-                        "startOffsets": "19827,21282",
-                        "endColumns": "41,59",
-                        "endOffsets": "19864,21337"
-                    }
-                },
-                {
                     "source": "C:\\Users\\damai\\.gradle\\caches\\transforms-3\\b64cb46cdffd89181ef740e42b3f75cb\\transformed\\jetified-appcompat-resources-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,29,36,47,74",
@@ -329,6 +312,23 @@
                         "startOffsets": "21342",
                         "endColumns": "53",
                         "endOffsets": "21391"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\damai\\.gradle\\caches\\transforms-3\\7c449e5c35745623d8a7fa8c1ce67e37\\transformed\\jetified-activity-1.9.3\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,97",
+                        "endColumns": "41,59",
+                        "endOffsets": "92,152"
+                    },
+                    "to": {
+                        "startLines": "328,356",
+                        "startColumns": "4,4",
+                        "startOffsets": "19827,21282",
+                        "endColumns": "41,59",
+                        "endOffsets": "19864,21337"
                     }
                 },
                 {

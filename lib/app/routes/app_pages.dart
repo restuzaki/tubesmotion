@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
+import 'package:tubes_motion/app/modules/aboutme/bindings/aboutme_binding.dart';
+import 'package:tubes_motion/app/modules/aboutme/views/aboutme_view.dart';
 import 'package:tubes_motion/app/modules/dream/bindings/dream_bindings.dart';
-import 'package:tubes_motion/app/modules/dream/controllers/dream_controller.dart';
 import 'package:tubes_motion/app/modules/dream/views/dream_view.dart';
 import 'package:tubes_motion/app/modules/profile/bindings/profile_binding.dart';
 import 'package:tubes_motion/app/modules/profile/views/profile_view.dart';
@@ -58,6 +59,11 @@ class AppPages {
       name: _Paths.DREAM,
       page: () => DreamView(),
       binding: DreamBinding(),
+    ),
+    GetPage(
+      name: _Paths.ABOUT_ME,
+      page: () => AboutMeView(),
+      binding: AboutMeBinding(),
     ),
   ];
 }
