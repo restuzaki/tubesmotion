@@ -8,6 +8,8 @@ class ProfileView extends GetView<ProfileController> {
 
   @override
   Widget build(BuildContext context) {
+    final ProfileController controller = Get.find<ProfileController>();
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -21,35 +23,37 @@ class ProfileView extends GetView<ProfileController> {
         padding: const EdgeInsets.all(10),
         children: [
           Column(
-            children: const [
-              CircleAvatar(
+            children: [
+              const CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
-                  "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80",
+                  "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80",
                 ),
               ),
-              SizedBox(height: 10),
-              Text(
-                "Rachael Wagner",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text("Junior Product Designer"),
+              const SizedBox(height: 10),
+
+              // Nama dan Posisi akan update secara otomatis
+              Obx(() => Text(
+                    controller.name.value,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )),
+              Obx(() => Text(
+                    controller.position.value,
+                    style: const TextStyle(fontSize: 14, color: Colors.grey),
+                  )),
             ],
           ),
           const SizedBox(height: 25),
-          Row(
-            children: const [
-              Padding(
-                padding: EdgeInsets.only(right: 5),
-                child: Text(
-                  "Your App Profile",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-            ],
+
+          const Padding(
+            padding: EdgeInsets.only(right: 5),
+            child: Text(
+              "Your App Profile",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
           const SizedBox(height: 10),
 
