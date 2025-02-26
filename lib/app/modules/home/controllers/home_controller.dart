@@ -1,9 +1,63 @@
 import 'package:flutter/material.dart';
 import 'package:tubes_motion/app/routes/app_pages.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
+  var name = ''.obs;
+  var position = ''.obs;
   var selectedIndex = 0.obs;
+  var divisions = ["MP", "Digital Business", "UI/UX"].obs;
+  var internName = [
+    "Joko Sumanto",
+    "Dean Gentong ",
+    "Jihan Centong",
+    "Syihan Shomat",
+    "Gea Geol",
+    "Hardi Jika",
+    "Raja Hati",
+    "Rapa Ham"
+  ].obs;
+  var courseTitle = "Belajar Flutter GetX".obs;
+  var scheduleTime = "18:30 - 20:30".obs;
+  var room = "Tult 07.05".obs;
+  var lecturerCode = "Bang Raihan".obs;
+  var internImages = <String>[].obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    bindUserData();
+    fetchInterns();
+  }
+
+  void bindUserData() {
+    String? userId = _auth.currentUser?.uid;
+
+    if (userId != null) {
+      _firestore.collection("users").doc(userId).snapshots().listen((snapshot) {
+        if (snapshot.exists) {
+          name.value = snapshot["name"] ?? "Unknown User";
+          position.value = snapshot["position"] ?? "No Position Set";
+        }
+      });
+    }
+  }
+
+  Future<void> updateProfile(String newName, String newPosition) async {
+    String? userId = _auth.currentUser?.uid;
+    if (userId != null) {
+      await _firestore.collection("users").doc(userId).update({
+        "name": newName,
+        "position": newPosition,
+      });
+    }
+  }
 
   void changeIndex(int index) {
     selectedIndex.value = index;
@@ -36,4 +90,25 @@ class HomeController extends GetxController {
           color: Colors.white,
         ),
       );
+
+  void fetchInterns() async {
+    try {
+      var response = await Dio().get("https://randomuser.me/api/?results=8");
+
+      if (response.statusCode == 200) {
+        var results = response.data["results"] as List;
+
+        // Pastikan hasilnya diubah ke List<String> sebelum dimasukkan ke internImages
+        List<String> images = results
+            .map<String>((e) => e["picture"]["large"] as String)
+            .toList();
+
+        internImages.assignAll(images);
+
+        update(); // Perbarui tampilan
+      }
+    } catch (e) {
+      print("Error fetching interns: $e");
+    }
+  }
 }

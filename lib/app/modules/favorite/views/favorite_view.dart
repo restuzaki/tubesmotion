@@ -9,7 +9,12 @@ class FavoriteView extends GetView<FavoriteController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Favorite Mentors")),
+      appBar: AppBar(
+        title: Text(
+          "Favorite Mentors",
+        ),
+        centerTitle: true,
+      ),
       body: Obx(() => controller.favoriteMentors.isEmpty
           ? Center(child: Text("No favorite mentors yet"))
           : ListView.builder(
