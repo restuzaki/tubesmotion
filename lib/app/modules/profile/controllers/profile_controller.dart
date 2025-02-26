@@ -45,7 +45,9 @@ class ProfileController extends GetxController {
     CustomListTile(
       icon: Icons.favorite,
       title: "Loved Mentors",
-      onTap: () {},
+      onTap: () {
+        Get.toNamed(Routes.FAVORITE);
+      },
     ),
     CustomListTile(
       icon: CupertinoIcons.person_alt,

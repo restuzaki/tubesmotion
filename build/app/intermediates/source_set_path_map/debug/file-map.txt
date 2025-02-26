@@ -61,4 +61,5 @@ com.motioncompany.tubes_motion.app-packaged_res-59 C:\Users\damai\tubes_motion\b
 com.motioncompany.tubes_motion.app-packaged_res-60 C:\Users\damai\tubes_motion\build\mobile_scanner\intermediates\packaged_res\debug
 com.motioncompany.tubes_motion.app-packaged_res-61 C:\Users\damai\tubes_motion\build\path_provider_android\intermediates\packaged_res\debug
 com.motioncompany.tubes_motion.app-packaged_res-62 C:\Users\damai\tubes_motion\build\shared_preferences_android\intermediates\packaged_res\debug
-com.motioncompany.tubes_motion.app-packaged_res-63 C:\Users\damai\tubes_motion\build\url_launcher_android\intermediates\packaged_res\debug
+com.motioncompany.tubes_motion.app-packaged_res-63 C:\Users\damai\tubes_motion\build\sqflite_android\intermediates\packaged_res\debug
+com.motioncompany.tubes_motion.app-packaged_res-64 C:\Users\damai\tubes_motion\build\url_launcher_android\intermediates\packaged_res\debug

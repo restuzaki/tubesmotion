@@ -31,8 +31,6 @@ class ProfileView extends GetView<ProfileController> {
                 ),
               ),
               const SizedBox(height: 10),
-
-              // Nama dan Posisi akan update secara otomatis
               Obx(() => Text(
                     controller.name.value,
                     style: const TextStyle(

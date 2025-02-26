@@ -3,6 +3,10 @@ import 'package:tubes_motion/app/modules/aboutme/bindings/aboutme_binding.dart';
 import 'package:tubes_motion/app/modules/aboutme/views/aboutme_view.dart';
 import 'package:tubes_motion/app/modules/dream/bindings/dream_bindings.dart';
 import 'package:tubes_motion/app/modules/dream/views/dream_view.dart';
+import 'package:tubes_motion/app/modules/favorite/bindings/favorite_binding.dart';
+import 'package:tubes_motion/app/modules/favorite/views/favorite_view.dart';
+import 'package:tubes_motion/app/modules/mentor/bindings/mentor_binding.dart';
+import 'package:tubes_motion/app/modules/mentor/views/mentor_view.dart';
 import 'package:tubes_motion/app/modules/profile/bindings/profile_binding.dart';
 import 'package:tubes_motion/app/modules/profile/views/profile_view.dart';
 import 'package:tubes_motion/app/modules/aboutapp/bindings/about_app_bindings.dart';
@@ -64,6 +68,16 @@ class AppPages {
       name: _Paths.ABOUT_ME,
       page: () => AboutMeView(),
       binding: AboutMeBinding(),
+    ),
+    GetPage(
+      name: _Paths.FAVORITE,
+      page: () => FavoriteView(),
+      binding: FavoriteBinding(),
+    ),
+    GetPage(
+      name: _Paths.MENTOR,
+      page: () => MentorView(),
+      binding: MentorBinding(),
     ),
   ];
 }
