@@ -98,14 +98,13 @@ class HomeController extends GetxController {
       if (response.statusCode == 200) {
         var results = response.data["results"] as List;
 
-        // Pastikan hasilnya diubah ke List<String> sebelum dimasukkan ke internImages
         List<String> images = results
             .map<String>((e) => e["picture"]["large"] as String)
             .toList();
 
         internImages.assignAll(images);
 
-        update(); // Perbarui tampilan
+        update();
       }
     } catch (e) {
       print("Error fetching interns: $e");

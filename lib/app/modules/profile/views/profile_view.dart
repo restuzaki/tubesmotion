@@ -45,7 +45,6 @@ class ProfileView extends GetView<ProfileController> {
             ],
           ),
           const SizedBox(height: 25),
-
           const Padding(
             padding: EdgeInsets.only(right: 5),
             child: Text(
@@ -54,7 +53,6 @@ class ProfileView extends GetView<ProfileController> {
             ),
           ),
           const SizedBox(height: 10),
-
           Container(
             height: 5,
             width: double.infinity,
@@ -63,10 +61,7 @@ class ProfileView extends GetView<ProfileController> {
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-
           const SizedBox(height: 35),
-
-          // List Tiles
           ...controller.customListTiles.map(
             (tile) => Padding(
               padding: const EdgeInsets.only(bottom: 5),

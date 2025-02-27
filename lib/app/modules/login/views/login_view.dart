@@ -135,8 +135,7 @@ class LoginView extends StatelessWidget {
                     const SizedBox(height: 30),
                     GestureDetector(
                       onTap: () {
-                        controller
-                            .login(); // Perbaikan: Panggil fungsi login dari controller
+                        controller.login();
                       },
                       child: Container(
                         width: 350,

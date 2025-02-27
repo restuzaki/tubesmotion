@@ -22,7 +22,7 @@ class Mentor {
       thumbnail:
           json['picture']?['large'] ?? "https://example.com/placeholder.png",
       divisi: _getDivisiById(id),
-      phone: json['phone'] ?? '000000000000', // Default jika tidak tersedia
+      phone: json['phone'] ?? '000000000000',
     );
   }
 
